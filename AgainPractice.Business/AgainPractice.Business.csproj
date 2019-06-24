@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.8.4.0\lib\net45\FluentValidation.dll</HintPath>
     </Reference>
@@ -50,21 +56,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
+    <Compile Include="DependencyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\FluentValidation\CategoryValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ProductValidator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AgainPractice.Core\AgainPractice.Core.csproj">
+      <Project>{5BF1DA9B-E905-435B-A454-58A641123DAE}</Project>
+      <Name>AgainPractice.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AgainPractice.DataAccess\AgainPractice.DataAccess.csproj">
+      <Project>{D5096C83-87A1-45BF-8BE9-DBD153D49791}</Project>
+      <Name>AgainPractice.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AgainPractice.Entities\AgainPractice.Entities.csproj">
       <Project>{C7DA4789-60C1-4069-9D32-51EDBF11392F}</Project>
       <Name>AgainPractice.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DependencyResolvers\Ninject\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

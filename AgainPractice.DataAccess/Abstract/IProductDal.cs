@@ -8,7 +8,7 @@ using AgainPractice.Entities.Concrete;
 
 namespace AgainPractice.DataAccess.Abstract
 {
-    interface IProductDal:IEntityRepository<Product>
+    public interface IProductDal:IEntityRepository<Product>
     {
     }
 }
