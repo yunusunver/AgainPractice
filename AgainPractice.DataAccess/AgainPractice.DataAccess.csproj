@@ -47,18 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfProductDal.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\CategoryMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ProductMap.cs" />
+    <Compile Include="Concrete\EntityFramework\PracticeContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\AgainPractice.Core\AgainPractice.Core.csproj">
+      <Project>{5BF1DA9B-E905-435B-A454-58A641123DAE}</Project>
+      <Name>AgainPractice.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AgainPractice.Entities\AgainPractice.Entities.csproj">
       <Project>{C7DA4789-60C1-4069-9D32-51EDBF11392F}</Project>
       <Name>AgainPractice.Entities</Name>
