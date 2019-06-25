@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AgainPractice.Business.Abstract;
+using AgainPractice.Core.Aspects.CacheAspects;
+using AgainPractice.Core.CrossCuttingConcerns.Caching.Microsoft;
 using AgainPractice.DataAccess.Abstract;
 using AgainPractice.Entities.Concrete;
 
@@ -18,6 +20,7 @@ namespace AgainPractice.Business.Concrete.Managers
             _categoryDal = categoryDal;
         }
 
+        [CacheAspect(typeof(MemoryCacheManager))]
         public List<Category> GetAll()
         {
             return _categoryDal.GetList();

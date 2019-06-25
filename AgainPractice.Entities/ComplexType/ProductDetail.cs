@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AgainPractice.Core.Entities;
 
-namespace AgainPractice.Entities.Concrete
+namespace AgainPractice.Entities.ComplexType
 {
-    public class Product:IEntity
+    public class ProductDetail:IEntity
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string Image { get; set; }

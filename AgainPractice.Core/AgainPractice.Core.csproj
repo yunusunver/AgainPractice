@@ -50,6 +50,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,7 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspects\CacheAspects\CacheAspect.cs" />
+    <Compile Include="Aspects\CacheAspects\CacheRemoveAspect.cs" />
     <Compile Include="Aspects\ValidationAspects\FluentValidationAspect.cs" />
+    <Compile Include="CrossCuttingConcerns\Caching\ICacheManager.cs" />
+    <Compile Include="CrossCuttingConcerns\Caching\Microsoft\MemoryCacheManager.cs" />
     <Compile Include="CrossCuttingConcerns\Validation\FluentValidation\ValidatorTool.cs" />
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\IEntityRepository.cs" />

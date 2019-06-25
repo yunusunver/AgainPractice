@@ -15,7 +15,7 @@ namespace AgainPractice.Core.Aspects.CacheAspects
         private int _cacheByMinute;
         private ICacheManager _cacheManager;
 
-        public CacheAspect(Type cacheType, int cacheTime)
+        public CacheAspect(Type cacheType, int cacheTime=60)
         {
             this._cacheType = cacheType;
             this._cacheByMinute = cacheTime;
