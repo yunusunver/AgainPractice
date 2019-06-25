@@ -11,7 +11,7 @@ namespace AgainPractice.Core.DataAccess.EntityFramework
 {
     public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity>
         where TEntity:class,IEntity,new()
-        where TContext:new(),DbContext
+        where TContext:DbContext,new()
     {
         public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null)
         {
