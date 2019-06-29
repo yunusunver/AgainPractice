@@ -19,6 +19,7 @@ namespace AgainPractice.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.Id).HasColumnName("Id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(x => x.Name).HasColumnName("Name");
             Property(x => x.CategoryId).HasColumnName("CategoryId");
+            Property(x => x.Image).HasColumnName("Image");
         }
     }
 }

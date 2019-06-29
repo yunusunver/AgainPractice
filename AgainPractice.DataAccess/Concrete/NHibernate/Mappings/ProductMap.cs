@@ -17,7 +17,7 @@ namespace AgainPractice.DataAccess.Concrete.NHibernate.Mappings
             Id(x => x.Id).Column("Id");
             Map(x => x.CategoryId).Column("CategoryId");
             Map(x => x.Image).Column("Image");
-            Map(x => x.CategoryName).Column("CategoryName");
+            Map(x => x.Name).Column("CategoryName");
         }
     }
 }
