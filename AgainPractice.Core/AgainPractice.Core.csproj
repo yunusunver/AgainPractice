@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Aspects\CacheAspects\CacheAspect.cs" />
     <Compile Include="Aspects\CacheAspects\CacheRemoveAspect.cs" />
+    <Compile Include="Aspects\LogAspects\LogAspect.cs" />
     <Compile Include="Aspects\PerformanceAspects\PerformanceCounterAspect.cs" />
     <Compile Include="Aspects\TransactionAspects\TransactionScopeAspect.cs" />
     <Compile Include="Aspects\ValidationAspects\FluentValidationAspect.cs" />
@@ -92,6 +93,8 @@
     <Compile Include="CrossCuttingConcerns\Caching\Microsoft\MemoryCacheManager.cs" />
     <Compile Include="CrossCuttingConcerns\Logging\Log4Net\Layouts\JsonLayout.cs" />
     <Compile Include="CrossCuttingConcerns\Logging\Log4Net\LoggerService.cs" />
+    <Compile Include="CrossCuttingConcerns\Logging\Log4Net\Loggers\DatabaseLogger.cs" />
+    <Compile Include="CrossCuttingConcerns\Logging\Log4Net\Loggers\FileLogger.cs" />
     <Compile Include="CrossCuttingConcerns\Logging\Log4Net\SerializableLogEvent.cs" />
     <Compile Include="CrossCuttingConcerns\Logging\LogDetail.cs" />
     <Compile Include="CrossCuttingConcerns\Logging\LogParameter.cs" />
