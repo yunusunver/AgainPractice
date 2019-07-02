@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 using AgainPractice.Business.Abstract;
 using AgainPractice.DataAccess.Abstract;
 using AgainPractice.Entities.Concrete;
+using AutoMapper;
 
 namespace AgainPractice.Business.Concrete.Managers
 {
     public class ProductManager:IProductService
     {
         private IProductDal _productDal;
+        private readonly IMapper _mapper;
 
-        public ProductManager(IProductDal productDal)
+        public ProductManager(IProductDal productDal,IMapper mapper)
         {
             _productDal = productDal;
+            _mapper = mapper;
         }
 
         public List<Product> GetAll()
         {
-            return _productDal.GetList();
+            var products = _mapper.Map<List<Product>>(_productDal.GetList());
+            return products;
         }
 
         public Product Get(int id)
